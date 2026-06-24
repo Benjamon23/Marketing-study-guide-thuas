@@ -79,6 +79,55 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.18;letter-spaci
 .sb-link.danger-link .sb-num{background:var(--amber);color:#fff}
 .sb-link.danger-link.active{background:var(--amber);color:#fff}
 
+.sb-link.exam-link{background:rgba(14,138,110,.15);color:rgba(255,255,255,.9);margin-bottom:2px}
+.sb-link.exam-link:hover{background:rgba(14,138,110,.3);color:#fff}
+.sb-link.exam-link .sb-num{background:#3ECBA5;color:#fff}
+.sb-link.exam-link.active{background:#3ECBA5;color:#fff}
+
+/* ===== Mock Exam Page ===== */
+.exam-page{background:linear-gradient(168deg,#0f1a1a,#0a1515);color:#fff;margin-top:46px;padding:56px 0 60px}
+.exam-page .wrap{max-width:920px}
+.exam-page h2{color:#fff;font-size:clamp(26px,4vw,38px);margin-bottom:8px}
+.exam-lead{color:rgba(255,255,255,.65);font-size:15px;max-width:640px;margin-top:8px;margin-bottom:28px}
+.exam-controls{display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap;align-items:center}
+.exam-btn{padding:10px 18px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;transition:all .15s}
+.exam-btn:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3)}
+.exam-btn.primary{background:#3ECBA5;border-color:#3ECBA5;color:#fff}
+.exam-btn.primary:hover{background:#2db896;border-color:#2db896}
+.case-tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.case-tab{padding:10px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:rgba(255,255,255,.7);cursor:pointer;font-family:'Space Grotesk';font-size:13px;font-weight:600;transition:all .15s}
+.case-tab:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25)}
+.case-tab.active{background:#3ECBA5;border-color:#3ECBA5;color:#fff}
+.exam-meta{font-family:'Space Mono';font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
+.q-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:24px;margin-bottom:20px;animation:slideUp .3s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)}}
+.q-num{font-family:'Space Mono';font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#3ECBA5;font-weight:700;margin-bottom:8px}
+.q-text{font-size:15px;font-weight:600;color:#fff;margin-bottom:18px;line-height:1.5}
+.q-opts{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.q-opt{padding:14px 16px;border-radius:8px;border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:rgba(255,255,255,.8);cursor:pointer;font-size:13.5px;transition:all .15s;display:flex;gap:10px;align-items:flex-start}
+.q-opt:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+.q-opt.selected{background:rgba(62,203,165,.2);border-color:#3ECBA5}
+.q-opt.correct{background:rgba(62,203,165,.25);border-color:#3ECBA5;color:#fff}
+.q-opt.wrong{background:rgba(240,74,56,.2);border-color:#F04A38;color:#ffb3a8}
+.q-opt.locked{cursor:not-allowed;opacity:.7}
+.q-opt-letter{flex:none;font-weight:700;font-family:'Space Mono';font-size:12px;min-width:20px}
+.q-opt-text{flex:1}
+.q-explain{background:rgba(255,255,255,.05);border-left:3px solid #3ECBA5;padding:16px;border-radius:8px;margin-top:18px;display:none;font-size:13px;line-height:1.6;color:rgba(255,255,255,.8)}
+.q-explain.show{display:block}
+.q-explain .opt-explain{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08)}
+.q-explain .opt-explain:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.q-explain b{color:#fff}
+.q-explain .correct-mark{color:#3ECBA5;font-weight:700}
+.q-explain .wrong-mark{color:#ff9880;font-weight:700}
+.exam-prog{margin-bottom:20px}
+.prog-bar{height:4px;background:rgba(255,255,255,.1);border-radius:8px;overflow:hidden}
+.prog-fill{height:100%;background:#3ECBA5;transition:width .3s}
+.prog-text{font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;text-align:right}
+.exam-score{background:rgba(62,203,165,.15);border:1px solid rgba(62,203,165,.3);border-radius:12px;padding:20px;text-align:center;margin-top:24px}
+.exam-score h4{color:#fff;font-size:14px;margin-bottom:6px}
+.exam-score .score{font-size:32px;font-weight:700;color:#3ECBA5;margin:10px 0}
+.exam-score .feedback{color:rgba(255,255,255,.7);font-size:13px;margin-top:8px}
+
 /* ===== Danger Zone page ===== */
 .danger-page{background:linear-gradient(168deg,#1a1a08,#0f1a0a);color:#fff;margin-top:46px;padding:56px 0 60px}
 .danger-page .wrap{max-width:960px}
@@ -339,6 +388,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.18;letter-spaci
     <a class="sb-link" href="#w13"><span class="sb-num">13</span> Social Selling &amp; Ecom</a>
     <div class="sb-sep">Before you walk in</div>
     <a class="sb-link danger-link" href="#tricky"><span class="sb-num">⚡</span> Danger Zone</a>
+    <a class="sb-link exam-link" href="#exam"><span class="sb-num">🎯</span> Mock Exam</a>
     <a class="sb-link finale" href="#recap"><span class="sb-num">✓</span> Final Recap Sheet</a>
   </nav>
 </aside>
@@ -2776,6 +2826,219 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.18;letter-spaci
 </section>
 
 </div><!-- /.wrap -->
+
+<!-- ===================== MOCK EXAM ===================== -->
+<section class="exam-page" id="exam">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#3ECBA5">Test yourself · 3 cases, 7 questions each (randomized)</div>
+    <h2>🎯 Mock Exam — Live Practice</h2>
+    <p class="exam-lead">Choose a case, get 7 random questions out of 15, and see detailed explanations for every option. Hit "Randomize" to shuffle the questions again.</p>
+
+    <div class="exam-controls">
+      <button class="exam-btn primary" onclick="randomizeExam()">🔀 Randomize Questions</button>
+      <button class="exam-btn" onclick="resetExam()">↻ Reset Answers</button>
+    </div>
+
+    <div class="case-tabs">
+      <button class="case-tab active" onclick="switchCase(0)">Nike Run Club</button>
+      <button class="case-tab" onclick="switchCase(1)">Decathlon Cycling</button>
+      <button class="case-tab" onclick="switchCase(2)">Gymshark Social Commerce</button>
+    </div>
+
+    <div class="exam-prog">
+      <div class="prog-bar"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+      <div class="prog-text"><span id="answeredCount">0</span>/7 answered</div>
+    </div>
+
+    <div id="examContent"></div>
+
+    <div class="exam-score" id="scoreCard" style="display:none">
+      <h4>Quiz Complete!</h4>
+      <div class="score" id="scoreDisplay">0/7</div>
+      <div class="feedback" id="feedbackText"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+// All case data with 15 questions each
+var examCases = [
+  {
+    name: 'Nike Run Club',
+    intro: 'Nike Run Club is a digital fitness platform supporting runners. The app combines GPS tracking, guided runs, personalized coaching, and social sharing. Nike segments users from beginners needing motivation to experienced athletes wanting performance data. The platform strengthens brand positioning around performance, inspiration, and community.',
+    questions: [
+      {q: 'Which segmentation approach is Nike using when it separates beginner runners from experienced athletes based on running habits and goals?', opts: [{l: 'A', t: 'Geographic segmentation', e: 'Wrong: Geographic segmentation is based on location, country, or climate. This focuses on behavior and goals, not location.'}, {l: 'B', t: 'Behavioral segmentation', e: 'Right: Behavioral segmentation groups customers based on usage, behavior, loyalty, or benefits sought. Beginner vs experienced is behavior-based.'}, {l: 'C', t: 'Demographic segmentation', e: 'Wrong: Demographic segmentation uses age, gender, income, education. The case focuses on behavior, not demographics.'}, {l: 'D', t: 'Price positioning', e: 'Wrong: Price positioning is a brand strategy. It is not a segmentation method.'}], ans: 1},
+      {q: 'Nike Run Club mainly supports which part of a customer-driven marketing strategy?', opts: [{l: 'A', t: 'Building relationships with the right customers through targeted value', e: 'Right: The app uses behavior, goals, and motivation to create relevant, targeted experiences for each segment.'}, {l: 'B', t: 'Using the same message for every customer globally', e: 'Wrong: This ignores segmentation and personalization, which the app relies on heavily.'}, {l: 'C', t: 'Reducing the need for customer insights', e: 'Wrong: The app actually increases data collection on behavior and preferences.'}, {l: 'D', t: 'Avoiding emotional connection with users', e: 'Wrong: Nike relies on inspiration, motivation, and community — all emotional connections.'}], ans: 0},
+      {q: 'The Nike Run Club guided runs and coaching plans are best described as part of which customer journey improvement?', opts: [{l: 'A', t: 'Reducing customer touchpoints', e: 'Wrong: Guided runs create more meaningful touchpoints, not fewer.'}, {l: 'B', t: 'Creating value before and after purchase', e: 'Right: The app provides coaching and support before, during, and after shoe purchases.'}, {l: 'C', t: 'Focusing only on physical retail', e: 'Wrong: The app is a digital touchpoint, not physical retail.'}, {l: 'D', t: 'Removing the need for branding', e: 'Wrong: The app strengthens Nike brand positioning and loyalty.'}], ans: 1},
+      {q: 'Which element of brand identity is most directly shown through Nike\'s motivational tone in app messages?', opts: [{l: 'A', t: 'Visual identity', e: 'Wrong: Visual identity includes logos, colors, and design. This is about tone and language.'}, {l: 'B', t: 'Verbal identity', e: 'Right: Verbal identity is the language, tone, and messaging used by a brand.'}, {l: 'C', t: 'Market share', e: 'Wrong: Market share is percentage of industry sales. Unrelated to communication style.'}, {l: 'D', t: 'Distribution channel', e: 'Wrong: Distribution channel is how products reach customers, not about messaging.'}], ans: 1},
+      {q: 'Nike positioning itself around performance, inspiration, and running community is mainly an example of:', opts: [{l: 'A', t: 'Brand positioning', e: 'Right: Brand positioning means designing an offering to occupy a distinctive place in consumers\' minds.'}, {l: 'B', t: 'Contract manufacturing', e: 'Wrong: Contract manufacturing is outsourcing production to another company.'}, {l: 'C', t: 'Customer churn', e: 'Wrong: Customer churn is the percentage of customers who stop doing business.'}, {l: 'D', t: 'Cost-plus pricing', e: 'Wrong: Cost-plus pricing is a pricing method, not positioning.'}], ans: 0},
+      {q: 'Nike adapting app campaigns to local running clubs and influencers is closest to which concept?', opts: [{l: 'A', t: 'Standardization', e: 'Wrong: Standardization means using the same approach everywhere. Local adaptation is the opposite.'}, {l: 'B', t: 'Glocalization', e: 'Right: Glocalization means thinking globally while acting locally — keeping the core brand consistent but adapting locally.'}, {l: 'C', t: 'Disintermediation', e: 'Wrong: Disintermediation removes intermediaries from distribution channels.'}, {l: 'D', t: 'Elastic demand', e: 'Wrong: Elastic demand refers to demand changing when price changes.'}], ans: 1},
+      {q: 'The app collecting training preferences and product interests creates which marketing asset for Nike?', opts: [{l: 'A', t: 'Customer insights', e: 'Right: Customer insights are actionable conclusions drawn from customer data and behavior.'}, {l: 'B', t: 'Exit barriers', e: 'Wrong: Exit barriers are obstacles that make it difficult for firms to leave an industry.'}, {l: 'C', t: 'Supplier power', e: 'Wrong: Supplier power is the influence suppliers have over prices and conditions.'}, {l: 'D', t: 'Actual market size', e: 'Wrong: Actual market size is current sales volume in a market.'}], ans: 0},
+      {q: 'If Nike creates a fictional profile like "Beginner Ben, age 23, wants to run 5K but lacks motivation", this is a:', opts: [{l: 'A', t: 'Customer persona', e: 'Right: A customer persona is a detailed fictional profile representing an ideal target customer.'}, {l: 'B', t: 'Market challenger', e: 'Wrong: A market challenger is a company trying to increase market share.'}, {l: 'C', t: 'Product life cycle', e: 'Wrong: Product life cycle describes introduction, growth, maturity, and decline stages.'}, {l: 'D', t: 'Cash cow', e: 'Wrong: A cash cow is a low-growth, high-market-share product in the BCG matrix.'}], ans: 0},
+      {q: 'Which customer experience goal is most directly achieved when the app makes training easier, more motivating, and more enjoyable?', opts: [{l: 'A', t: 'Create positive customer relationships that encourage loyalty and trust', e: 'Right: Making interactions easier, motivating, and enjoyable directly builds positive relationships and loyalty.'}, {l: 'B', t: 'Increase supplier bargaining power', e: 'Wrong: Supplier bargaining power is about suppliers influencing prices, not customer experience.'}, {l: 'C', t: 'Reduce product differentiation', e: 'Wrong: Nike is increasing differentiation through the superior app experience.'}, {l: 'D', t: 'Limit customer feedback', e: 'Wrong: The app can collect more feedback, not limit it.'}], ans: 0},
+      {q: 'Which touchpoint type is the Nike Run Club app?', opts: [{l: 'A', t: 'Physical touchpoint', e: 'Wrong: Physical touchpoints are in-store, face-to-face, or phone-based interactions.'}, {l: 'B', t: 'Digital touchpoint', e: 'Right: Digital touchpoints include apps, websites, social media, email, and online platforms.'}, {l: 'C', t: 'Wholesaler touchpoint', e: 'Wrong: Wholesalers sell to retailers or businesses, not to end consumers.'}, {l: 'D', t: 'Supplier touchpoint', e: 'Wrong: Not a relevant customer experience touchpoint category.'}], ans: 1},
+      {q: 'If Nike compares app features and running communities against Adidas and ASICS, this is:', opts: [{l: 'A', t: 'Benchmarking', e: 'Right: Benchmarking means comparing performance or processes against competitors or industry leaders.'}, {l: 'B', t: 'Licensing', e: 'Wrong: Licensing gives another company permission to produce products for a fee.'}, {l: 'C', t: 'Question mark strategy', e: 'Wrong: Question mark is a high-growth, low-market-share product in the BCG matrix.'}, {l: 'D', t: 'Customer effort score', e: 'Wrong: CES measures how easy interactions are, not competitive comparison.'}], ans: 0},
+      {q: 'Nike\'s app challenges, badges, and social sharing mainly strengthen which branding outcome?', opts: [{l: 'A', t: 'Brand engagement', e: 'Right: Brand engagement is the level of interaction and emotional involvement with a brand.'}, {l: 'B', t: 'Political factors', e: 'Wrong: Political factors are government policies and regulations.'}, {l: 'C', t: 'Potential market size', e: 'Wrong: Potential market size is maximum possible demand in a market.'}, {l: 'D', t: 'Cost structure', e: 'Wrong: Cost structure refers to production and delivery costs.'}], ans: 0},
+      {q: 'When Nike studies inflation, sustainability expectations, and technology trends before expanding in a new country, it is using:', opts: [{l: 'A', t: 'PESTLE analysis', e: 'Right: PESTLE analyzes Political, Economic, Social, Technological, Legal, and Environmental factors.'}, {l: 'B', t: 'CSAT formula', e: 'Wrong: CSAT measures customer satisfaction, not macro environmental factors.'}, {l: 'C', t: 'Direct channel analysis only', e: 'Wrong: Direct channel is about selling without intermediaries, not macro analysis.'}, {l: 'D', t: 'Aided brand recall', e: 'Wrong: Aided recall is recognizing a brand after prompts.'}], ans: 0},
+      {q: 'If Nike\'s app users repeatedly buy Nike running shoes because they trust the training ecosystem, this shows:', opts: [{l: 'A', t: 'Brand loyalty', e: 'Right: Brand loyalty is the tendency to repeatedly choose the same brand due to trust and satisfaction.'}, {l: 'B', t: 'Threat of substitutes', e: 'Wrong: Threat of substitutes is the risk that alternative products satisfy the same need.'}, {l: 'C', t: 'Market risk', e: 'Wrong: Market risk is uncertainty when entering new markets.'}, {l: 'D', t: 'Product decline', e: 'Wrong: Product decline is a life-cycle stage where demand decreases.'}], ans: 0},
+      {q: 'Which metric would best measure whether Nike Run Club users are likely to recommend the app to other runners?', opts: [{l: 'A', t: 'Net Promoter Score', e: 'Right: NPS measures customer loyalty and willingness to recommend a brand or service to others.'}, {l: 'B', t: 'Customer churn rate', e: 'Wrong: Churn rate measures the percentage of customers lost, not likelihood to recommend.'}, {l: 'C', t: 'Average resolution time', e: 'Wrong: Average resolution time measures how long it takes to solve support issues.'}, {l: 'D', t: 'Actual market share', e: 'Wrong: Market share is the company\'s percentage of industry sales.'}], ans: 0}
+    ]
+  },
+  {
+    name: 'Decathlon Cycling',
+    intro: 'Decathlon expands its cycling category by combining CRM, digital promotion, pricing, and multiple sales channels. It sells bikes, helmets, and accessories through stores, website, app, and click-and-collect. The goal is to serve beginners, commuters, and serious cyclists with personalized recommendations and value pricing.',
+    questions: [
+      {q: 'When Decathlon sends helmet recommendations to customers who recently bought a bicycle, which CRM practice is it using?', opts: [{l: 'A', t: 'Cross-selling', e: 'Right: Cross-selling encourages customers to purchase related or complementary products.'}, {l: 'B', t: 'Disintermediation', e: 'Wrong: Disintermediation removes intermediaries from a distribution channel.'}, {l: 'C', t: 'Competitive parity budgeting', e: 'Wrong: Competitive parity budgeting sets promotion budgets based on competitor spending.'}, {l: 'D', t: 'Skimming pricing', e: 'Wrong: Skimming pricing launches a product at a high price to maximize early revenue.'}], ans: 0},
+      {q: 'Decathlon grouping customers by purchase behavior and product interests is an example of:', opts: [{l: 'A', t: 'Behavioral segmentation', e: 'Right: Behavioral segmentation groups customers based on purchase history, usage, loyalty, or interests.'}, {l: 'B', t: 'Vertical conflict', e: 'Wrong: Vertical conflict is disagreement between different levels of a distribution channel.'}, {l: 'C', t: 'Affordable budgeting', e: 'Wrong: Affordable budgeting means spending what management believes it can afford.'}, {l: 'D', t: 'Direct foreign investment', e: 'Wrong: Direct foreign investment means investing directly in foreign facilities or businesses.'}], ans: 0},
+      {q: 'Which CRM type is Decathlon using when it analyzes purchase data to predict which customers may buy maintenance packages?', opts: [{l: 'A', t: 'Operational CRM', e: 'Wrong: Operational CRM supports sales and service processes, but prediction is more analytical CRM.'}, {l: 'B', t: 'Analytical CRM', e: 'Right: Analytical CRM focuses on analyzing customer data and behavior to make predictions.'}, {l: 'C', t: 'Collaborative CRM only', e: 'Wrong: Collaborative CRM improves communication between departments and partners.'}, {l: 'D', t: 'Customer service CRM only', e: 'Wrong: Customer service CRM supports service operations, not predictive data analysis.'}], ans: 1},
+      {q: 'A goal to increase online bike accessory sales by 12% in three months is best described as:', opts: [{l: 'A', t: 'A SMART objective', e: 'Right: It is Specific (online accessories), Measurable (12%), Achievable, Relevant, and Time-bound (3 months).'}, {l: 'B', t: 'A vague brand association', e: 'Wrong: A brand association is a thought or feeling linked to a brand, not a measurable goal.'}, {l: 'C', t: 'A horizontal conflict', e: 'Wrong: Horizontal conflict is disagreement between organizations at the same channel level.'}, {l: 'D', t: 'A customer churn formula', e: 'Wrong: Customer churn formula calculates percentage of lost customers.'}], ans: 0},
+      {q: 'Decathlon publishing bike maintenance tutorials to attract and engage cyclists is an example of:', opts: [{l: 'A', t: 'Content marketing', e: 'Right: Content marketing creates valuable content (tutorials) to attract and engage target audiences.'}, {l: 'B', t: 'Wholesale distribution', e: 'Wrong: Wholesale involves selling products to retailers or businesses.'}, {l: 'C', t: 'Dynamic pricing', e: 'Wrong: Dynamic pricing adjusts prices in real time based on market conditions.'}, {l: 'D', t: 'Supplier power', e: 'Wrong: Supplier power is suppliers\' influence over prices and supply availability.'}], ans: 0},
+      {q: 'Which metric should Decathlon use to measure how easy it is for customers to resolve bike assembly problems?', opts: [{l: 'A', t: 'Customer Effort Score', e: 'Right: CES measures how easy it is for customers to interact with a company or resolve issues.'}, {l: 'B', t: 'Market share calculation', e: 'Wrong: Market share divides company sales by total market sales.'}, {l: 'C', t: 'Share of voice', e: 'Wrong: Share of voice measures advertising exposure compared with competitors.'}, {l: 'D', t: 'Cost per mille', e: 'Wrong: CPM is the cost per thousand ad impressions.'}], ans: 0},
+      {q: 'Spring discounts on cycling accessories are best classified as:', opts: [{l: 'A', t: 'Sales promotion', e: 'Right: Sales promotion refers to short-term incentives designed to encourage product purchase.'}, {l: 'B', t: 'Public relations', e: 'Wrong: PR builds positive relationships with stakeholders and the public.'}, {l: 'C', t: 'Personal selling', e: 'Wrong: Personal selling involves direct salespeople-to-customer interaction.'}, {l: 'D', t: 'Brand identity', e: 'Wrong: Brand identity is the visual and verbal elements that define a brand.'}], ans: 0},
+      {q: 'If Decathlon chooses its advertising budget by estimating the cost of each campaign needed to reach its goals, which budgeting method is it using?', opts: [{l: 'A', t: 'Percentage-of-sales method', e: 'Wrong: This bases budget on a percentage of sales revenue.'}, {l: 'B', t: 'Objective-and-task method', e: 'Right: This sets objectives, determines required tasks, and estimates the cost of those tasks.'}, {l: 'C', t: 'Affordable method', e: 'Wrong: This is based on what management believes it can afford.'}, {l: 'D', t: 'Competitive-parity method', e: 'Wrong: This is based on competitors\' spending levels.'}], ans: 1},
+      {q: 'Decathlon selling through its website, app, stores, and click-and-collect points is best described as:', opts: [{l: 'A', t: 'Multichannel distribution', e: 'Right: Multichannel distribution means using multiple channels to reach customers.'}, {l: 'B', t: 'Exclusive distribution', e: 'Wrong: Exclusive distribution limits distribution to selected intermediaries only.'}, {l: 'C', t: 'Licensing', e: 'Wrong: Licensing gives permission to another company to produce and sell products.'}, {l: 'D', t: 'Contract manufacturing', e: 'Wrong: Contract manufacturing is outsourcing production to another company.'}], ans: 0},
+      {q: 'When customers compare online prices with in-store availability and this creates tension in the channel, this is:', opts: [{l: 'A', t: 'Channel conflict', e: 'Right: Channel conflict refers to disagreements or tensions among channel members or across channels.'}, {l: 'B', t: 'Customer lifetime value', e: 'Wrong: CLV is total revenue expected from a customer during the relationship.'}, {l: 'C', t: 'Net promoter score', e: 'Wrong: NPS measures customer loyalty and willingness to recommend.'}, {l: 'D', t: 'Product introduction stage', e: 'Wrong: This is the first stage of the product life cycle.'}], ans: 0},
+      {q: 'Decathlon\'s own website selling directly to customers is a:', opts: [{l: 'A', t: 'Direct channel', e: 'Right: A direct channel has no intermediaries between producer and end customer.'}, {l: 'B', t: 'Indirect channel', e: 'Wrong: An indirect channel includes one or more intermediaries (wholesalers, retailers).'}, {l: 'C', t: 'Wholesaler channel', e: 'Wrong: A wholesaler sells products to retailers or other businesses.'}, {l: 'D', t: 'Business distributor', e: 'Wrong: A business distributor serves business customers as an intermediary.'}], ans: 0},
+      {q: 'Pricing Decathlon products based on customer-perceived affordability and usefulness is closest to:', opts: [{l: 'A', t: 'Value-based pricing', e: 'Right: Value-based pricing sets price based on customer-perceived value, not just costs.'}, {l: 'B', t: 'Cost-plus pricing only', e: 'Wrong: Cost-plus pricing uses costs plus a fixed margin, ignoring customer value.'}, {l: 'C', t: 'Algorithmic pricing only', e: 'Wrong: Algorithmic pricing is determined automatically through algorithms.'}, {l: 'D', t: 'High-low pricing only', e: 'Wrong: High-low pricing starts high and later uses discounts.'}], ans: 0},
+      {q: 'If Decathlon tracks the percentage of customers who stop buying after their first bike purchase, it is measuring:', opts: [{l: 'A', t: 'Churn rate', e: 'Right: Churn rate is the percentage of customers lost during a specific time period.'}, {l: 'B', t: 'CPM', e: 'Wrong: CPM is cost per thousand ad impressions.'}, {l: 'C', t: 'Aided recall', e: 'Wrong: Aided recall is brand recognition after hints or prompts.'}, {l: 'D', t: 'Channel length', e: 'Wrong: Channel length is the number of intermediary levels in a distribution channel.'}], ans: 0},
+      {q: 'Decathlon using SEO and SEA to increase website visibility means it is using which digital marketing area?', opts: [{l: 'A', t: 'Search engine marketing', e: 'Right: SEM increases website visibility through search engines via SEO (organic) and paid search ads.'}, {l: 'B', t: 'Physical distribution', e: 'Wrong: Physical distribution is transporting and storing physical products.'}, {l: 'C', t: 'Franchising', e: 'Wrong: Franchising licenses a brand and operating system to another business.'}, {l: 'D', t: 'Risk taking function', e: 'Wrong: Risk taking is a channel function where organizations assume risks.'}], ans: 0},
+      {q: 'Which CRM action best shows a feedback loop in Decathlon\'s cycling category?', opts: [{l: 'A', t: 'Collecting customer complaints about assembly, improving instructions, and monitoring later complaints', e: 'Right: A feedback loop is collecting feedback, acting on it, and monitoring the impact.'}, {l: 'B', t: 'Setting one fixed price for all products forever', e: 'Wrong: Fixed pricing does not show feedback collection or action.'}, {l: 'C', t: 'Removing all online reviews to protect the brand', e: 'Wrong: Removing reviews reduces feedback and customer trust.'}, {l: 'D', t: 'Using only wholesalers for every sale', e: 'Wrong: This is a distribution decision, not a feedback-loop process.'}], ans: 0}
+    ]
+  },
+  {
+    name: 'Gymshark Social Commerce',
+    intro: 'Gymshark grew through social media, influencer partnerships, and e-commerce. It uses Instagram, TikTok, YouTube, and LinkedIn to build visibility, nurture leads, and convert followers into online customers. Content includes workout videos, athlete stories, product launches, and customer-generated content. Social selling focuses on relationship building, not just promotion.',
+    questions: [
+      {q: 'Gymshark using creators to build trust and drive sales through social media is an example of:', opts: [{l: 'A', t: 'Social selling', e: 'Right: Social selling is the strategic use of social media to build relationships and drive sales.'}, {l: 'B', t: 'Traditional selling only', e: 'Wrong: Traditional selling is based on cold calls, cold emails, and direct outreach.'}, {l: 'C', t: 'Direct foreign investment', e: 'Wrong: Direct foreign investment means investing in foreign facilities or businesses.'}, {l: 'D', t: 'Physical distribution', e: 'Wrong: Physical distribution is transporting and storing physical products.'}], ans: 0},
+      {q: 'A potential customer who follows Gymshark, watches product videos, and signs up for launch emails is best described as a:', opts: [{l: 'A', t: 'Lead', e: 'Right: A lead is a potential customer showing interest in a product or service.'}, {l: 'B', t: 'Wholesaler', e: 'Wrong: A wholesaler sells products to retailers or other businesses.'}, {l: 'C', t: 'Cash cow', e: 'Wrong: A cash cow is a low-growth, high-market-share product in the BCG matrix.'}, {l: 'D', t: 'Supplier', e: 'Wrong: A supplier provides inputs or products to a company.'}], ans: 0},
+      {q: 'Gymshark sending emails to people who viewed products but did not buy is an example of:', opts: [{l: 'A', t: 'Lead nurturing', e: 'Right: Lead nurturing is the process of developing relationships with potential customers.'}, {l: 'B', t: 'Cold calling', e: 'Wrong: Cold calling means calling prospects without prior contact.'}, {l: 'C', t: 'Market risk', e: 'Wrong: Market risk is uncertainty associated with entering new markets.'}, {l: 'D', t: 'Exclusive distribution', e: 'Wrong: Exclusive distribution limits distribution to selected intermediaries.'}], ans: 0},
+      {q: 'Which platform is most relevant for Gymshark\'s B2B social selling toward corporate wellness partners?', opts: [{l: 'A', t: 'LinkedIn', e: 'Right: LinkedIn is the most important platform for B2B social selling and professional networking.'}, {l: 'B', t: 'Instagram only', e: 'Wrong: Instagram is better for B2C consumer marketing and creator content.'}, {l: 'C', t: 'In-store posters only', e: 'Wrong: In-store posters are not a social selling platform.'}, {l: 'D', t: 'Physical catalogs', e: 'Wrong: Physical catalogs are not a social media channel.'}], ans: 0},
+      {q: 'Gymshark athletes sharing training routines and honest stories mainly supports which principle?', opts: [{l: 'A', t: 'Authentic content', e: 'Right: Authentic content is genuine, trustworthy, and builds credibility with audiences.'}, {l: 'B', t: 'Cost-plus pricing', e: 'Wrong: Cost-plus pricing is a pricing method based on costs plus markup.'}, {l: 'C', t: 'Indirect channel length', e: 'Wrong: Channel length is the number of intermediary levels in distribution.'}, {l: 'D', t: 'Percentage-of-sales budgeting', e: 'Wrong: Percentage-of-sales budgeting sets budget as a percentage of sales revenue.'}], ans: 0},
+      {q: 'A Gymshark founder posting about fitness culture and digital brand building to influence business partners is creating:', opts: [{l: 'A', t: 'Thought leadership content', e: 'Right: Thought leadership content demonstrates expertise and industry knowledge.'}, {l: 'B', t: 'Customer support tickets', e: 'Wrong: Customer support tickets are recorded customer issues or requests.'}, {l: 'C', t: 'Product configurators', e: 'Wrong: Product configurators allow customization of products.'}, {l: 'D', t: 'Horizontal channel conflict', e: 'Wrong: Horizontal conflict is disagreement between organizations at the same channel level.'}], ans: 0},
+      {q: 'Gymshark measuring likes, shares, and follower comments is tracking:', opts: [{l: 'A', t: 'Follower engagement', e: 'Right: Likes, shares, and comments are direct measures of audience engagement with content.'}, {l: 'B', t: 'Customer effort score only', e: 'Wrong: CES measures how easy interactions are, not social engagement.'}, {l: 'C', t: 'Actual market size', e: 'Wrong: Actual market size is current sales volume in a market.'}, {l: 'D', t: 'Supplier power', e: 'Wrong: Supplier power is the influence suppliers have over prices or supply.'}], ans: 0},
+      {q: 'The completion of a purchase on Gymshark\'s website is called:', opts: [{l: 'A', t: 'Online conversion', e: 'Right: Online conversion is the completion of a desired action online, such as a purchase.'}, {l: 'B', t: 'Brand recall', e: 'Wrong: Brand recall is the ability to remember a brand without prompts.'}, {l: 'C', t: 'Market entry mode', e: 'Wrong: Market entry mode is the method used to enter a foreign market.'}, {l: 'D', t: 'Risk taking', e: 'Wrong: Risk taking is a channel function where organizations assume business risks.'}], ans: 0},
+      {q: 'Gymshark selling apparel directly through its own website is which e-commerce type?', opts: [{l: 'A', t: 'Business-to-consumer e-commerce', e: 'Right: B2C e-commerce is online transactions between a business and individual consumers.'}, {l: 'B', t: 'Business-to-business e-commerce only', e: 'Wrong: B2B e-commerce involves transactions between businesses, not consumers.'}, {l: 'C', t: 'Wholesale-only commerce', e: 'Wrong: Wholesale-only would involve selling to retailers or businesses.'}, {l: 'D', t: 'Traditional selling only', e: 'Wrong: Traditional selling is direct outreach like cold calling and emails.'}], ans: 0},
+      {q: 'A balanced mix of workout videos, athlete stories, product launches, and educational posts is called:', opts: [{l: 'A', t: 'Content mix', e: 'Right: Content mix is a balanced combination of different content types to engage audiences.'}, {l: 'B', t: 'Skimming mix', e: 'Wrong: Skimming pricing is a high launch price strategy, not content strategy.'}, {l: 'C', t: 'Channel level', e: 'Wrong: Channel level refers to layers of intermediaries in distribution.'}, {l: 'D', t: 'Churn analysis', e: 'Wrong: Churn analysis studies why customers leave a brand.'}], ans: 0},
+      {q: 'Why does Gymshark optimize creator profiles and brand social pages?', opts: [{l: 'A', t: 'To appear professional, credible, and easier to trust', e: 'Right: Profile optimization makes pages professional and credible, building trust with followers.'}, {l: 'B', t: 'To eliminate the need for e-commerce', e: 'Wrong: Optimized social profiles support e-commerce; they do not eliminate it.'}, {l: 'C', t: 'To reduce product quality', e: 'Wrong: Profile optimization has no purpose of reducing product quality.'}, {l: 'D', t: 'To avoid relationship building', e: 'Wrong: Social selling depends heavily on building relationships with followers.'}], ans: 0},
+      {q: 'A limited product drop moving customers from awareness to purchase is part of the:', opts: [{l: 'A', t: 'Sales funnel', e: 'Right: A sales funnel describes the stages customers move through from awareness to purchase.'}, {l: 'B', t: 'Supplier funnel', e: 'Wrong: Supplier funnel is not a standard marketing concept.'}, {l: 'C', t: 'PESTLE framework', e: 'Wrong: PESTLE analyzes external macro factors like politics and economy.'}, {l: 'D', t: 'BCG matrix only', e: 'Wrong: The BCG matrix analyzes products by market growth and market share.'}], ans: 0},
+      {q: 'If Gymshark uses retargeting ads for users who abandoned their cart, the main goal is:', opts: [{l: 'A', t: 'Lead conversion', e: 'Right: Lead conversion is turning interested prospects (abandoned carts) into paying customers.'}, {l: 'B', t: 'Lowering supplier power', e: 'Wrong: Supplier power is the influence suppliers have, unrelated to abandoned carts.'}, {l: 'C', t: 'Increasing channel length', e: 'Wrong: Increasing channel length would add intermediaries, not help conversions.'}, {l: 'D', t: 'Reducing brand visibility', e: 'Wrong: Retargeting increases visibility and conversion, not reduces visibility.'}], ans: 0},
+      {q: 'Gymshark\'s community posts that encourage customers to share transformations can create:', opts: [{l: 'A', t: 'Word of mouth', e: 'Right: Word of mouth occurs when customers share recommendations and experiences with others.'}, {l: 'B', t: 'Cost structure', e: 'Wrong: Cost structure refers to production and delivery costs.'}, {l: 'C', t: 'Legal environment only', e: 'Wrong: Legal environment refers to laws and regulations affecting business.'}, {l: 'D', t: 'Average resolution time', e: 'Wrong: Average resolution time measures the time needed to solve customer issues.'}], ans: 0},
+      {q: 'Which metric best links Gymshark\'s social selling activity to business results?', opts: [{l: 'A', t: 'Sales revenue from social campaigns', e: 'Right: Sales revenue directly links social activities to business outcomes.'}, {l: 'B', t: 'Number of suppliers only', e: 'Wrong: Number of suppliers does not show social selling performance.'}, {l: 'C', t: 'Office rent cost', e: 'Wrong: Office rent is an overhead cost, not a social selling result metric.'}, {l: 'D', t: 'Political risk score only', e: 'Wrong: Political risk does not directly measure campaign performance.'}], ans: 0}
+    ]
+  }
+];
+
+var currentCase = 0;
+var selectedQuestions = [];
+var userAnswers = {};
+var currentQuestionIndex = 0;
+
+function initExam() { randomizeExam(); }
+
+function randomizeExam() {
+  userAnswers = {};
+  currentQuestionIndex = 0;
+  var allQs = examCases[currentCase].questions;
+  var shuffled = [];
+  var indices = [];
+  for (var i = 0; i < allQs.length; i++) indices.push(i);
+  for (var i = indices.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = indices[i]; indices[i] = indices[j]; indices[j] = temp;
+  }
+  for (var i = 0; i < 7; i++) { shuffled.push(allQs[indices[i]]); }
+  selectedQuestions = shuffled;
+  renderExam();
+}
+
+function switchCase(i) {
+  currentCase = i;
+  document.querySelectorAll('.case-tab').forEach(function(el, idx){ 
+    el.classList.toggle('active', idx === i); 
+  });
+  randomizeExam();
+}
+
+function resetExam() { 
+  userAnswers = {};
+  renderExam();
+  document.getElementById('scoreCard').style.display = 'none';
+}
+
+function selectAnswer(qIdx, optIdx) {
+  if (userAnswers[qIdx] !== undefined) return;
+  userAnswers[qIdx] = optIdx;
+  renderExam();
+  updateScore();
+}
+
+function renderExam() {
+  var html = '<div class="exam-meta">' + examCases[currentCase].name + ' · ' + selectedQuestions.length + ' questions</div>';
+  html += '<p style="color:rgba(255,255,255,.75);font-size:13.5px;margin-bottom:28px">' + examCases[currentCase].intro + '</p>';
+  
+  selectedQuestions.forEach(function(q, qIdx) {
+    var answered = userAnswers[qIdx] !== undefined;
+    var correct = answered && userAnswers[qIdx] === q.ans;
+    
+    html += '<div class="q-card">';
+    html += '<div class="q-num">Question ' + (qIdx + 1) + '</div>';
+    html += '<div class="q-text">' + q.q + '</div>';
+    html += '<div class="q-opts">';
+    
+    q.opts.forEach(function(opt, optIdx) {
+      var selected = answered && userAnswers[qIdx] === optIdx;
+      var isCorrect = optIdx === q.ans;
+      var cl = 'q-opt';
+      if (answered) cl += ' locked';
+      if (selected && correct) cl += ' correct';
+      if (selected && !correct) cl += ' wrong';
+      
+      html += '<div class="' + cl + '" onclick="selectAnswer(' + qIdx + ', ' + optIdx + ')">';
+      html += '<span class="q-opt-letter">' + opt.l + '</span>';
+      html += '<span class="q-opt-text">' + opt.t + '</span>';
+      html += '</div>';
+    });
+    
+    if (answered) {
+      html += '<div class="q-explain show">';
+      q.opts.forEach(function(opt, optIdx) {
+        var mark = optIdx === q.ans ? '<span class="correct-mark">✓ Correct</span>' : '<span class="wrong-mark">✗ Wrong</span>';
+        html += '<div class="opt-explain"><b>' + opt.l + '.</b> ' + mark + ': ' + opt.e + '</div>';
+      });
+      html += '</div>';
+    }
+    
+    html += '</div></div>';
+  });
+  
+  document.getElementById('examContent').innerHTML = html;
+}
+
+function updateScore() {
+  var answered = Object.keys(userAnswers).length;
+  var correct = 0;
+  selectedQuestions.forEach(function(q, idx) {
+    if (userAnswers[idx] === q.ans) correct++;
+  });
+  
+  document.getElementById('answeredCount').textContent = answered;
+  document.getElementById('progFill').style.width = (answered / 7 * 100) + '%';
+  
+  if (answered === 7) {
+    var percentage = Math.round((correct / 7) * 100);
+    var feedback = percentage >= 80 ? '🎯 Exam-ready! Excellent understanding of the concepts.' :
+                   percentage >= 70 ? '✓ Good grasp. Review the concepts you missed.' :
+                   percentage >= 60 ? '△ Getting there. Focus on the Danger Zone for tricky pairs.' :
+                   '• Keep studying. Use the search bar to find these concepts.';
+    document.getElementById('scoreDisplay').textContent = correct + '/7';
+    document.getElementById('feedbackText').textContent = feedback;
+    document.getElementById('scoreCard').style.display = 'block';
+  }
+}
+
+window.addEventListener('load', function(){ initExam(); });
+</script>
+
 
 <!-- ===================== DANGER ZONE ===================== -->
 <section class="danger-page" id="tricky">
