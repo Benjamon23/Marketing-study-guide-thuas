@@ -81,6 +81,17 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.18;letter-spaci
 /* ---------- Topbar (mobile) ---------- */
 .topbar{display:none;position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;
   align-items:center;justify-content:space-between;padding:12px 16px}
+.topbar .search-box{flex:1;position:relative;margin:0 16px}
+.search-input{width:100%;padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:14px;font-family:inherit}
+.search-input::placeholder{color:rgba(255,255,255,.5)}
+.search-input:focus{outline:none;border-color:var(--coral);background:rgba(255,255,255,.12)}
+.search-dropdown{position:absolute;top:100%;left:0;right:0;background:var(--ink);border:1px solid rgba(255,255,255,.15);border-radius:8px;max-height:320px;overflow-y:auto;display:none;z-index:100;margin-top:4px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.search-dropdown.show{display:block}
+.search-result{padding:10px 12px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px;color:rgba(255,255,255,.8)}
+.search-result:last-child{border-bottom:none}
+.search-result:hover{background:rgba(240,74,56,.15);color:#fff}
+.search-result .match-text{color:var(--coral);font-weight:600}
+.search-no-results{padding:12px;text-align:center;color:rgba(255,255,255,.5);font-size:12px}
 .topbar .tb-title{font-family:'Space Grotesk';font-weight:700;font-size:15px}
 .menu-btn{background:rgba(255,255,255,.1);border:none;color:#fff;width:40px;height:40px;border-radius:9px;font-size:18px;cursor:pointer}
 .scrim{display:none;position:fixed;inset:0;background:rgba(10,18,33,.55);z-index:55}
@@ -279,7 +290,10 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.18;letter-spaci
 
 <div class="topbar">
   <button class="menu-btn" onclick="openMenu()" aria-label="Open menu">☰</button>
-  <div class="tb-title">Exam Command Center</div>
+  <div class="search-box">
+    <input type="text" id="searchInput" class="search-input" placeholder="Search study guide..." aria-label="Search">
+    <div id="searchDropdown" class="search-dropdown"></div>
+  </div>
   <div style="width:40px"></div>
 </div>
 
@@ -2823,6 +2837,63 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.18;letter-spaci
 <button class="totop" id="totop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <script>
+// Build search index from all sections
+var searchIndex = [];
+function buildSearchIndex(){
+  var sections = document.querySelectorAll('.section, .recap');
+  sections.forEach(function(s){
+    var id = s.id;
+    var h2 = s.querySelector('h2');
+    var title = h2 ? h2.textContent.trim() : '';
+    var text = s.textContent.toLowerCase();
+    var intro = s.querySelector('.intro-card');
+    var introText = intro ? intro.textContent.substring(0, 100) : '';
+    searchIndex.push({id:id, title:title, text:text, snippet:introText});
+  });
+}
+
+// Search and display results
+var searchInput = document.getElementById('searchInput');
+var searchDropdown = document.getElementById('searchDropdown');
+if(searchInput){
+  searchInput.addEventListener('input', function(){
+    var query = this.value.toLowerCase().trim();
+    searchDropdown.innerHTML = '';
+    if(query.length < 2){
+      searchDropdown.classList.remove('show');
+      return;
+    }
+    var results = searchIndex.filter(function(item){
+      return item.text.includes(query);
+    }).slice(0, 12);
+    if(results.length === 0){
+      searchDropdown.innerHTML = '<div class="search-no-results">No results found</div>';
+      searchDropdown.classList.add('show');
+      return;
+    }
+    results.forEach(function(r){
+      var div = document.createElement('div');
+      div.className = 'search-result';
+      var idx = r.text.indexOf(query);
+      var before = r.text.substring(Math.max(0, idx - 20), idx);
+      var after = r.text.substring(idx + query.length, idx + query.length + 30);
+      var context = (idx > 20 ? '...' : '') + before + '<span class="match-text">' + query + '</span>' + after + (idx + query.length + 30 < r.text.length ? '...' : '');
+      div.innerHTML = '<div style="font-weight:600;margin-bottom:4px">' + r.title + '</div><div style="font-size:12px;color:rgba(255,255,255,.6)">' + context + '</div>';
+      div.onclick = function(){
+        searchInput.value = '';
+        searchDropdown.classList.remove('show');
+        var elem = document.getElementById(r.id);
+        if(elem) elem.scrollIntoView({behavior:'smooth',block:'start'});
+      };
+      searchDropdown.appendChild(div);
+    });
+    searchDropdown.classList.add('show');
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.search-box')) searchDropdown.classList.remove('show');
+  });
+}
+
 (function(){
   var sidebar=document.getElementById('sidebar'), scrim=document.getElementById('scrim');
   window.openMenu=function(){sidebar.classList.add('open');scrim.classList.add('show');};
@@ -2873,7 +2944,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.18;letter-spaci
     if(window.scrollY>600) totop.classList.add('show'); else totop.classList.remove('show');
   }
   window.addEventListener('scroll',onScroll,{passive:true});
-  window.addEventListener('load',onScroll);
+  window.addEventListener('load',function(){onScroll(); buildSearchIndex();});
   onScroll();
 })();
 </script>
