@@ -74,7 +74,48 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.18;letter-spaci
 }
 .sb-link.gap .sb-num{background:rgba(224,147,12,.25);color:var(--amber)}
 .sb-sep{font-family:'Space Mono';font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.35);text-transform:uppercase;padding:16px 12px 7px}
-.sb-link.finale{background:rgba(240,74,56,.14);color:#fff;margin-top:4px;font-weight:600}
+.sb-link.danger-link{background:rgba(224,147,12,.12);color:rgba(255,255,255,.9);margin-bottom:2px}
+.sb-link.danger-link:hover{background:rgba(224,147,12,.25);color:#fff}
+.sb-link.danger-link .sb-num{background:var(--amber);color:#fff}
+.sb-link.danger-link.active{background:var(--amber);color:#fff}
+
+/* ===== Danger Zone page ===== */
+.danger-page{background:linear-gradient(168deg,#1a1a08,#0f1a0a);color:#fff;margin-top:46px;padding:56px 0 60px}
+.danger-page .wrap{max-width:960px}
+.danger-page h2{color:#fff;font-size:clamp(26px,4vw,38px)}
+.danger-page .lead{color:rgba(255,255,255,.65);font-size:16px;max-width:640px;margin-top:8px}
+.dz-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+@media(max-width:760px){.dz-grid{grid-template-columns:1fr}}
+.dz-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px 20px;position:relative;overflow:hidden}
+.dz-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+.dz-card.amber::before{background:var(--amber)}
+.dz-card.coral::before{background:var(--coral)}
+.dz-card.teal::before{background:var(--teal)}
+.dz-card.full{grid-column:1/-1}
+.dz-week{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:8px}
+.dz-week.tl{color:var(--teal)}
+.dz-week.cr{color:var(--coral)}
+.dz-card h4{color:#fff;font-size:16px;margin-bottom:14px;font-family:'Space Grotesk'}
+.dz-item{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.07)}
+.dz-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.dz-pair{display:flex;align-items:flex-start;gap:10px;margin-bottom:6px}
+.dz-vs{flex:none;font-family:'Space Mono';font-size:10px;font-weight:700;color:var(--coral);background:rgba(240,74,56,.15);padding:3px 7px;border-radius:5px;margin-top:2px;white-space:nowrap}
+.dz-vs.am{color:var(--amber);background:rgba(224,147,12,.15)}
+.dz-vs.tl{color:#3ECBA5;background:rgba(14,138,110,.2)}
+.dz-terms{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.dz-term{font-family:'Space Grotesk';font-size:13.5px;font-weight:700;color:#fff}
+.dz-term em{color:var(--coral);font-style:normal}
+.dz-separator{color:rgba(255,255,255,.3);font-size:12px;align-self:center}
+.dz-body{font-size:13.5px;color:rgba(255,255,255,.72);line-height:1.6}
+.dz-body b{color:#fff;font-weight:600}
+.dz-body .highlight{color:var(--amber);font-weight:600}
+.dz-body .correct{color:#3ECBA5;font-weight:600}
+.dz-body .wrong{color:var(--coral);font-weight:600}
+.dz-lightning{display:inline-block;margin-right:6px;font-size:13px}
+.dz-tag{display:inline-block;font-family:'Space Mono';font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;border-radius:5px;font-weight:700;margin-bottom:8px}
+.dz-tag.trap{background:rgba(240,74,56,.25);color:#ff8a7a}
+.dz-tag.subtle{background:rgba(224,147,12,.2);color:#f5c84a}
+.dz-tag.logic{background:rgba(14,138,110,.2);color:#3ECBA5}
 .sb-link.finale:hover{background:rgba(240,74,56,.26)}
 .sb-link.finale .sb-num{background:var(--coral)}
 
@@ -297,6 +338,7 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.18;letter-spaci
     <a class="sb-link gap" href="#w12"><span class="sb-num">12</span> Sales &amp; Accounts (gap)</a>
     <a class="sb-link" href="#w13"><span class="sb-num">13</span> Social Selling &amp; Ecom</a>
     <div class="sb-sep">Before you walk in</div>
+    <a class="sb-link danger-link" href="#tricky"><span class="sb-num">⚡</span> Danger Zone</a>
     <a class="sb-link finale" href="#recap"><span class="sb-num">✓</span> Final Recap Sheet</a>
   </nav>
 </aside>
@@ -2735,6 +2777,325 @@ h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.18;letter-spaci
 
 </div><!-- /.wrap -->
 
+<!-- ===================== DANGER ZONE ===================== -->
+<section class="danger-page" id="tricky">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--amber)">The non-obvious stuff · read this carefully</div>
+    <h2>⚡ Danger Zone — Key Differences</h2>
+    <p class="lead">These are the pairs and concepts that look similar, sound similar, or seem obvious but aren't. This is exactly where marks get lost. Not definitions — the tricky distinctions the exam exploits.</p>
+
+    <div class="dz-grid">
+
+      <!-- W1+W4: MARKETING CONCEPTS -->
+      <div class="dz-card amber">
+        <div class="dz-week">Week 1 + 4 · Concepts</div>
+        <h4>The marketing concept evolution trap</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">Societal Marketing</span><span class="dz-separator">≠</span><span class="dz-term">Sustainable Marketing</span></div>
+          <div class="dz-body">They sound like the same thing. They're not. <b>Societal</b> = balance three things <b>right now</b>: company profit, customer wants, and society's wellbeing. <b>Sustainable</b> = protecting <b>future generations'</b> ability to meet their needs. One is about the present balance, one is about the future. When a question says "long-term environmental impact" → sustainable. When it says "balance profit, customer and society" → societal.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Selling Concept</span><span class="dz-separator">≠</span><span class="dz-term">Marketing Concept</span></div>
+          <div class="dz-body">The <b>selling concept</b> says: make the product first, then push it hard until people buy. The <b>marketing concept</b> flips it: understand what people need first, then make something for that. This seems obvious but the exam will describe a company's approach and ask you to classify it. The tell: if they're starting from the product and pushing → selling. If they're starting from research and need → marketing.</div>
+        </div>
+      </div>
+
+      <!-- W2: RESEARCH TOOLS -->
+      <div class="dz-card coral">
+        <div class="dz-week cr">Week 2 · Research Tools</div>
+        <h4>The "which analysis tool" traps</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">SWOT</span><span class="dz-separator">vs</span><span class="dz-term">PESTEL</span></div>
+          <div class="dz-body">Both include external factors. The trap: SWOT is broader (internal + external), so it seems like the "complete" answer. But when the question explicitly says <b>"external factors only"</b>, the answer is always <b>PESTEL</b>. SWOT when they want the full picture. PESTEL when the word "external" appears alone.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Porter's Five Forces</span><span class="dz-separator">≠</span><span class="dz-term">competitive analysis</span></div>
+          <div class="dz-body">Porter's is NOT about comparing yourself to specific rivals. It's about the <b>structural attractiveness of the whole industry</b> — how much profit potential exists in it. It answers "is this a good industry to be in?" not "how do we beat Company X?"</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Micro environment</span><span class="dz-separator">≠</span><span class="dz-term">internal</span></div>
+          <div class="dz-body">Micro = <b>external</b> but close forces you can influence: customers, suppliers, distributors, competitors. Students often think "micro" means "inside the company." It doesn't. Internal = employees, finances, culture. Micro = the nearby external world.</div>
+        </div>
+      </div>
+
+      <!-- W3: STP -->
+      <div class="dz-card teal">
+        <div class="dz-week tl">Week 3 · STP</div>
+        <h4>Segmentation vs Targeting vs Positioning</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">Segmenting</span><span class="dz-separator">≠</span><span class="dz-term">Targeting</span></div>
+          <div class="dz-body">People use these interchangeably. They're two separate steps. <b>Segmenting</b> = dividing the whole market into groups. You haven't chosen anyone yet. <b>Targeting</b> = deciding which segment(s) to actually go after. Emirates segments the market into economy, business, first class travellers — that's segmentation. Choosing to invest in first-class luxury travellers — that's targeting.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Psychographic</span><span class="dz-separator">vs</span><span class="dz-term">Behavioural</span></div>
+          <div class="dz-body"><b>Psychographic</b> = who they <b>are inside</b>: values, lifestyle, personality, self-image ("I see myself as free-spirited"). <b>Behavioural</b> = what they <b>actually do</b>: how often they buy, loyalty stage, benefits they want. Harley fans' "freedom" identity = psychographic. Frequency of purchases or loyalty tier = behavioural.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Positioning</span></div>
+          <div class="dz-body">Positioning is NOT a price tag or product feature. It's a <b>place in the customer's mind</b> relative to competitors. You don't position your product — you position it <b>in someone's head</b>. The actual product is secondary; the perception is what matters.</div>
+        </div>
+      </div>
+
+      <!-- W4: BRANDING -->
+      <div class="dz-card amber">
+        <div class="dz-week">Week 4 · Branding</div>
+        <h4>Identity, image and equity</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">Brand Identity</span><span class="dz-separator">≠</span><span class="dz-term">Brand Image</span></div>
+          <div class="dz-body"><b>Identity</b> = what the company <b>intends to project</b>. You control it: logo, colours, tone, messaging. <b>Image</b> = what the customer <b>actually perceives</b>. You don't control it. A brand can intend to look innovative (identity) but customers still see it as old-fashioned (image). Questions about "what the company sends out" = identity. "How customers see it" = image.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Brand equity pyramid</span></div>
+          <div class="dz-body">You build equity <b>bottom-up, not top-down</b>. You can't have loyalty without quality perception. You can't have quality perception without associations. You can't have associations without awareness. The exam might describe a company skipping steps — that's always a wrong strategy. <b class="correct">Start at awareness, earn loyalty.</b></div>
+        </div>
+      </div>
+
+      <!-- W5: INTERNATIONALIZATION -->
+      <div class="dz-card coral full">
+        <div class="dz-week cr">Week 5 · Internationalization</div>
+        <h4>BCG vs Ansoff, and entry mode logic</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Most confused pair in the course</div>
+          <div class="dz-terms"><span class="dz-term">BCG Matrix</span><span class="dz-separator">≠</span><span class="dz-term">Ansoff Matrix</span></div>
+          <div class="dz-body">Both are 2×2 grids and both involve "markets" and "products" in some form. The difference: <b>BCG</b> looks at your <b>existing product portfolio</b> — it tells you what to fund, milk or drop based on market growth and your share. <b>Ansoff</b> looks at <b>growth direction</b> — it tells you where to expand next. BCG = "what do we do with what we have?" Ansoff = "where do we go next?"</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">Market Development</span><span class="dz-separator">≠</span><span class="dz-term">Product Development</span></div>
+          <div class="dz-body">Students flip these constantly. <b>Market Development</b> = <b>existing product</b>, new market (Harley taking its bikes to India). <b>Product Development</b> = new product, <b>existing market</b> (Harley launching the LiveWire electric bike to its current US fans). The thing that stays the same is in the name: market development = the product stays, the market is new. Product development = the market stays, the product is new.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Standardization</span><span class="dz-separator">vs</span><span class="dz-term">Adaptation</span><span class="dz-separator">vs</span><span class="dz-term">Glocalization</span></div>
+          <div class="dz-body"><b>Standardization</b> = exact same product and marketing everywhere. <b>Adaptation</b> = change things per country. <b>Glocalization</b> = a strategy that does <b>both at once</b>: keep the core brand the same globally, but adapt local execution. It's not a middle ground — it's a deliberate combination. "Think global, act local."</div>
+        </div>
+      </div>
+
+      <!-- W6: CX METRICS -->
+      <div class="dz-card teal full">
+        <div class="dz-week tl">Week 6 · Customer Experience Metrics</div>
+        <h4>The metrics that get swapped on every exam</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">The most tested swap</div>
+          <div class="dz-terms"><span class="dz-term">NPS</span><span class="dz-separator">≠</span><span class="dz-term">CSAT</span><span class="dz-separator">≠</span><span class="dz-term">CES</span></div>
+          <div class="dz-body">All three measure how customers feel, but differently. <b>NPS</b> = <b>loyalty</b> — "would you recommend us?" (0–10 scale). <b>CSAT</b> = <b>satisfaction</b> with a specific interaction. <b>CES</b> = <b>effort</b> — "how hard was it to get this done?" The exam loves describing a scenario and asking which metric fits. "Customer recommends" → NPS. "Happy with the call" → CSAT. "How easy was it to resolve" → CES.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">NPS passives don't count</span></div>
+          <div class="dz-body">NPS = % Promoters <b>minus</b> % Detractors. Passives (7–8) are <b>completely ignored</b> in the calculation. A company with 60% passives could still have an NPS of +40 if their promoters (60%) minus detractors (20%) = 40. Students often include passives in the maths. Don't.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Omnichannel</span><span class="dz-separator">≠</span><span class="dz-term">Multichannel</span></div>
+          <div class="dz-body"><b>Multichannel</b> = present on many channels (app, store, website). <b>Omnichannel</b> = those channels are <b>fully connected and seamless</b>. A customer can start on the app, continue in store, and finish online — all with shared data and no friction. Having many channels does NOT make you omnichannel. The key word is <b>seamless integration</b>.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">Cross-sell</span><span class="dz-separator">≠</span><span class="dz-term">Upsell</span></div>
+          <div class="dz-body"><b>Cross-sell</b> = offer a <b>related, different product</b> (phone case with a phone). <b>Upsell</b> = offer a <b>better/pricier version of the same thing</b> (128GB instead of 64GB). Both increase revenue but in different directions: sideways (cross) vs upward (up).</div>
+        </div>
+      </div>
+
+      <!-- W7: CRM -->
+      <div class="dz-card amber">
+        <div class="dz-week">Week 7 · CRM</div>
+        <h4>CRM types and the lead funnel</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">Operational</span><span class="dz-separator">vs</span><span class="dz-term">Analytical</span><span class="dz-separator">vs</span><span class="dz-term">Collaborative CRM</span></div>
+          <div class="dz-body"><b>Operational</b> = <b>automates daily tasks</b> (sending follow-up emails, logging calls). It does the work. <b>Analytical</b> = <b>mines data for insights</b> (finding churn patterns, identifying high-value segments). It thinks. <b>Collaborative</b> = <b>shares customer info across teams</b> and sometimes partners. It connects. The exam will describe what a company is doing — match the verb: automate → operational, analyse → analytical, share → collaborative.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Lead generation</span><span class="dz-separator">≠</span><span class="dz-term">Lead acquisition</span></div>
+          <div class="dz-body"><b>Lead generation</b> = capturing interest (the spark): someone fills in a form, downloads a guide, clicks an ad. <b>Lead acquisition</b> = the <b>full process</b> from generating that interest all the way through to becoming a customer. Generation is one step inside acquisition. Acquisition is the whole funnel.</div>
+        </div>
+      </div>
+
+      <!-- W8: PRODUCT LEVELS -->
+      <div class="dz-card coral">
+        <div class="dz-week cr">Week 8 · Products &amp; Services</div>
+        <h4>Product levels and service traps</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Core</span><span class="dz-separator">vs</span><span class="dz-term">Actual</span><span class="dz-separator">vs</span><span class="dz-term">Augmented</span></div>
+          <div class="dz-body">Students put warranty and delivery in the "actual" product. They belong to <b>augmented</b>. The <b>actual</b> product is the physical thing: features, design, quality, brand name. The <b>augmented</b> = everything wrapped around it: warranty, after-sales, delivery, installation. The <b>core</b> is the deepest layer — the real need being solved, not the object itself ("transport and status", not "a motorcycle").</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Intangibility</span><span class="dz-separator">≠</span><span class="dz-term">Inseparability</span></div>
+          <div class="dz-body"><b>Intangibility</b> = you can't touch or try a service before you buy it. <b>Inseparability</b> = the service is produced and consumed <b>at the same time</b>, by the same person. A haircut is intangible (you don't know exactly what you'll get) AND inseparable (the barber cuts while you're sitting there — you can't separate production from consumption). Two different problems, both features of services.</div>
+        </div>
+      </div>
+
+      <!-- W9: PRICING -->
+      <div class="dz-card teal">
+        <div class="dz-week tl">Week 9 · Pricing</div>
+        <h4>Pricing strategies that get confused</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">Price skimming</span><span class="dz-separator">≠</span><span class="dz-term">Premium pricing</span></div>
+          <div class="dz-body"><b>Premium pricing</b> = permanently high price to signal quality. The price stays high forever. <b>Skimming</b> = start very high at launch to capture early adopters, then <b>lower the price over time</b> as demand from early adopters is exhausted. Skimming is a <b>launch tactic</b>. Premium is a <b>permanent position</b>. Harley's LiveWire uses skimming — the price drops as it reaches a broader market.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Elastic</span><span class="dz-separator">≠</span><span class="dz-term">Inelastic</span></div>
+          <div class="dz-body">The naming is counterintuitive. <b>Elastic</b> demand <b>stretches and shrinks</b> with price — it's <b>price-sensitive</b>. A small price rise → big drop in sales. <b>Inelastic</b> demand <b>barely moves</b> — people buy anyway. The more essential or unique the product, the more inelastic. Petrol, insulin, cigarettes = inelastic. Luxury snacks = elastic. Don't let the word "elastic" make you think it's rigid.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Cost-based</span><span class="dz-separator">vs</span><span class="dz-term">Value-based pricing</span></div>
+          <div class="dz-body"><b>Cost-based</b> = start from what it costs you, add a margin. Simple, ignores the customer completely. <b>Value-based</b> = start from what the customer <b>believes it's worth</b>, price accordingly. For premium brands this means you can charge far above cost because the perceived value is high. Emirates doesn't price flights based on fuel cost alone — they price based on what luxury travellers will pay.</div>
+        </div>
+      </div>
+
+      <!-- W10: PROMOTION -->
+      <div class="dz-card amber">
+        <div class="dz-week">Week 10 · Promotion</div>
+        <h4>Promotion mix and budget traps</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Advertising</span><span class="dz-separator">≠</span><span class="dz-term">PR</span></div>
+          <div class="dz-body">Both spread the message but differently. <b>Advertising</b> = you <b>pay</b> for the placement, you control every word. <b>PR</b> = you <b>earn</b> the coverage (a journalist writes about you, a review goes viral). PR is seen as <b>more credible</b> because it's not paid for — the audience knows advertising is biased. PR is harder to control but more trusted.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">Push</span><span class="dz-separator">≠</span><span class="dz-term">Pull</span></div>
+          <div class="dz-body"><b>Push</b> = push the product <b>through the channel</b> to the customer (trade discounts, sales force selling to retailers). The product is pushed down the chain. <b>Pull</b> = create so much consumer demand that <b>customers pull the product through the channel</b> themselves (they go to the retailer and ask for it). Strong brands mostly use pull. New brands need push to get shelf space.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Unaided recall</span><span class="dz-separator">is stronger than</span><span class="dz-term">Aided recall</span></div>
+          <div class="dz-body"><b>Unaided</b> = someone names your brand with no prompt. <b>Aided</b> = they recognise you when they see your name. Unaided is harder to achieve and much more valuable — it means you're <b>top of mind</b> without any trigger. A brand that achieves unaided recall has deeper loyalty and is harder to displace by competitors.</div>
+        </div>
+      </div>
+
+      <!-- W11: DISTRIBUTION -->
+      <div class="dz-card coral">
+        <div class="dz-week cr">Week 11 · Distribution</div>
+        <h4>Channel intensity and conflict</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">Intensive</span><span class="dz-separator">vs</span><span class="dz-term">Selective</span><span class="dz-separator">vs</span><span class="dz-term">Exclusive</span></div>
+          <div class="dz-body">It's not just about how many outlets — the choice <b>signals your brand position</b>. A luxury brand using intensive distribution (available everywhere) would <b>destroy its premium image</b>. A mass product using exclusive distribution would <b>starve itself of sales</b>. The choice has to match the brand: <b>premium = exclusive, mass = intensive</b>. Selective sits in the middle for mid-tier products.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Vertical conflict</span><span class="dz-separator">≠</span><span class="dz-term">Horizontal conflict</span></div>
+          <div class="dz-body">The naming is spatial. <b>Vertical</b> = conflict between <b>different levels</b> of the channel (producer argues with retailer). Think of the channel as a vertical chain — the friction is between floors. <b>Horizontal</b> = conflict between companies at the <b>same level</b> (two retailers of the same brand competing against each other). Same floor, side by side.</div>
+        </div>
+      </div>
+
+      <!-- W12: SALES -->
+      <div class="dz-card teal">
+        <div class="dz-week tl">Week 12 · Sales</div>
+        <h4>AIDA vs Journey, and B2B vs B2C</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">AIDA</span><span class="dz-separator">≠</span><span class="dz-term">Customer Journey</span></div>
+          <div class="dz-body">Both describe a progression but they're different models for different purposes. <b>AIDA</b> ends in <b>Action</b> (the purchase). It's a sales and communication model. The <b>Customer Journey</b> ends in <b>Advocacy</b> (telling others). It's a relationship model. AIDA stops at the sale. The journey continues past the sale into retention and referral. If a question is about structuring a sales message → AIDA. Long-term customer relationship → Journey.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">Follow-up (step 7)</span></div>
+          <div class="dz-body">Most people remember the first 6 steps of personal selling and forget step 7: <b>follow-up</b>. It's not just a courtesy — it's strategically the most important for <b>repeat business and referrals</b>. A customer who feels looked after after the sale is far more likely to come back and recommend. Skipping follow-up is the most common real-world sales mistake.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Not obvious</div>
+          <div class="dz-terms"><span class="dz-term">B2B</span><span class="dz-separator">≠</span><span class="dz-term">B2C selling</span></div>
+          <div class="dz-body">B2B is not just "selling to companies." It means: <b>fewer but larger buyers</b>, <b>multiple decision-makers</b> in one deal, <b>longer sales cycles</b>, and <b>rational/ROI-driven decisions</b>. B2C is emotional, fast, one decision-maker. The IKEA app being used by architects, developers and contractors in client meetings = B2B. A regular customer using it at home to try a sofa = B2C. Same app, completely different selling contexts.</div>
+        </div>
+      </div>
+
+      <!-- W13: SOCIAL -->
+      <div class="dz-card amber">
+        <div class="dz-week">Week 13 · Social Selling</div>
+        <h4>Social selling ≠ social media marketing</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Most confused pair in this week</div>
+          <div class="dz-terms"><span class="dz-term">Social Selling</span><span class="dz-separator">≠</span><span class="dz-term">Social Media Marketing</span></div>
+          <div class="dz-body"><b>Social Media Marketing</b> = broadcasting brand content to audiences. One-to-many, focused on reach, visibility, engagement metrics. <b>Social Selling</b> = using social platforms to <b>build one-to-one relationships</b> with specific prospects and move them toward a sale. It's about individual conversations, not broadcasts. A brand posting Instagram ads = SMM. A sales rep sending a LinkedIn message after engaging with a prospect's posts = social selling.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Common trap</div>
+          <div class="dz-terms"><span class="dz-term">Ecommerce</span><span class="dz-separator">≠</span><span class="dz-term">Social commerce</span></div>
+          <div class="dz-body"><b>Ecommerce</b> = buying and selling on a dedicated online store or marketplace (your website, Amazon, Bol). <b>Social commerce</b> = the entire transaction happens <b>inside the social media app</b> without leaving it. Instagram Shop where you tap a product and buy without opening a browser = social commerce. Being redirected to IKEA's website from Instagram = ecommerce, not social commerce.</div>
+        </div>
+      </div>
+
+      <!-- THE DEEPEST NON-OBVIOUS SECTION -->
+      <div class="dz-card coral full">
+        <div class="dz-week cr">Across all weeks · The deepest traps</div>
+        <h4>Things that seem logical but aren't — universal exam traps</h4>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Universal trap</div>
+          <div class="dz-terms"><span class="dz-term">The "best/primary/directly" word trap</span></div>
+          <div class="dz-body">When the question says "which tool <b>best</b>", "which metric measures this <b>directly</b>", or "the <b>primary</b> goal" — two answers will be partially correct. The one with the tightest direct link wins. Example: "measure satisfaction directly" → CSAT wins over NPS even though NPS correlates with satisfaction. <b>Directly</b> is the deciding word.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag trap">Universal trap</div>
+          <div class="dz-terms"><span class="dz-term">Textbook-correct beats real-world-clever</span></div>
+          <div class="dz-body">The exam answers align with <b>what the textbook says the concept is</b>, not what would actually work in real life. If a question about Harley's pricing mentions "early adopters" and "launch" — the answer is skimming, even if value-based also makes sense. Always match the scenario to the framework as it's <b>defined in the course</b>, not as common sense might suggest.</div>
+        </div>
+
+        <div class="dz-item">
+          <div class="dz-tag subtle">Universal pattern</div>
+          <div class="dz-terms"><span class="dz-term">Eliminate before choosing</span></div>
+          <div class="dz-body">Two options are usually obviously wrong in every MC question. Eliminate those first. The real decision is almost always between 2 remaining options, not 4. This halves the cognitive load on every question — and since guessing is penalised, you only guess if you can get it down to 2.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ===================== FINAL RECAP ===================== -->
 <section class="recap" id="recap">
   <div class="wrap">
@@ -2883,6 +3244,7 @@ function buildSearchIndex() {
     {id:'w11', label:'Week 11 · Distribution & Channels', icon:'11'},
     {id:'w12', label:'Week 12 · Sales & Account Management', icon:'12'},
     {id:'w13', label:'Week 13 · Social Selling & Ecommerce', icon:'13'},
+    {id:'tricky', label:'⚡ Danger Zone — Key Differences', icon:'⚡'},
     {id:'recap', label:'Final Recap Sheet', icon:'✓'}
   ];
 
